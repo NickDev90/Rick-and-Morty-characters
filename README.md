@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+This is an aplication for easy searching for characters of Rick&Morty show
+
 In the project directory, you can run:
 
 ### `npm start`

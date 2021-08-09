@@ -1,0 +1,10 @@
+.searchPage {
+	display: flex;
+	align-items: center;
+	padding-left: 50px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}

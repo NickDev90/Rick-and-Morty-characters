@@ -1,0 +1,17 @@
+.sidebar {
+	width: 40%;
+	background: linear-gradient(225deg, #33BD7D 0%, #008F8D 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img {
+	display: block;
+	width: 73%;
+}
+
+.img img {
+	width: 100%;
+	height: 100%;
+}
