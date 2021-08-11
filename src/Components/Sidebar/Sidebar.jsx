@@ -5,6 +5,7 @@ import mainImage from '../../assets/images/rick-and-morty-portal-shoes-white-clo
 
 const Sidebar = () => {
 	return <div className={styles.sidebar}>
+	<h2 className={styles.appTitle}>Rick and Morty</h2>
 	<div className={styles.img}>
 		<img src={mainImage} alt="" />
 	</div>

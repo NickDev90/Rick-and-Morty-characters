@@ -4,18 +4,13 @@ import {NavLink} from 'react-router-dom';
 import Character from './../Character/Character.js'
 import Preloader from './../Preloader/Preloader.jsx'
 
-// const getAll = fetch('https://rickandmortyapi.com/api/character/').
-// 	then( response => {
-// 		return console.log(response.json());
-// 	})
-
 
 const ResultPage = (props) => {
 
  	const {backToSearch} = props;
- 	const {requestName, requestStatus, requestGender} = props.state;
+ 	const {requestName, requestStatus, requestGender, characters} = props.state;
 
- 	if (!props.characters) {
+ 	if (!characters) {
  		debugger
 		return <Preloader />
 	}
@@ -24,7 +19,6 @@ const ResultPage = (props) => {
 
 
 	<div className={styles.result_page}>
-		<div className={styles.container}>
 			<div className={styles.topPannel}>
 				<NavLink to="/search" onClick={backToSearch}>
 					<button className={styles.backButton}></button>
@@ -49,11 +43,8 @@ const ResultPage = (props) => {
 			</div>
 			
 			{
-			  props.characters.map( (item) => <Character hero={item} key={item.id} /> )
+			  characters.map( (item) => <Character hero={item} key={item.id} /> )
 			}
-	  	
-
-		</div>
 	</div>
 )
 }

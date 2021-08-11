@@ -11,9 +11,21 @@
 }
 
 .heroInfo span {
-	display: block;
-/*	flex: 1 1 auto;
-*/}
+	flex-wrap: wrap;
+	min-width: 20%;
+	color: #1C4D43;
+	font-size: 16px;
+}
+
+.heroInfo span:hover {
+	cursor: default;
+}
+
+.heroInfo .heroName {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 16px;
+}
 
 span {
 	text-align: left;

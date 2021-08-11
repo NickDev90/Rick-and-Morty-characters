@@ -6,11 +6,9 @@ import SearchPage from './Components/SearchPage/SearchPage.jsx';
 import ResultPage from './Components/ResultPage/ResultPage.jsx';
  import {reqApi} from './API/reqApi.js'
 
-// import {getCharacters} from './API/reqApi.js'
 
-
-    const getCharacters = fetch(`https://rickandmortyapi.com/api/character`).
-    then( response => response.json());
+    // const getCharacters = fetch(`https://rickandmortyapi.com/api/character`).
+    // then( response => response.json());
 
 class App extends React.Component {
   constructor(props) {
@@ -24,10 +22,8 @@ class App extends React.Component {
       requestGender: ''
     };
 
-    // this.setState = this.setState.bind(this);
     this.changeState = this.changeState.bind(this);
     this.backToSearch = this.backToSearch.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   changeState(name, status, gender) {
@@ -52,8 +48,6 @@ class App extends React.Component {
       }
 
     )
-    // this.props.history.push('results')
-
   }
 
   backToSearch() {
@@ -71,9 +65,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    // if (this.state.isLoaded) {
-    //   return <Redirect to={`/results`} />
-    // }
+
     console.log(this.state)
   }
 
@@ -87,13 +79,17 @@ class App extends React.Component {
           <Route path='/search' render={ () =>
             <SearchPage changeState={this.changeState}/>}/>
 
+          <Route path='/' render={ () =>
+              <Redirect to={'search'}  />} 
+          /> 
+
             {this.state.isFetching &&
               <Redirect to={`/results`} />
             }
             
           <Route path='/results' render={ () => 
             <ResultPage backToSearch={this.backToSearch} state={this.state}
-              characters={this.state.characters} isLoaded={this.state.isLoaded}/> } />
+              isLoaded={this.state.isLoaded}/> } />
           </BrowserRouter>
       </div>
     );

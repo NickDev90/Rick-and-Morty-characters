@@ -1,10 +1,8 @@
 .result_page {
-	width: 60%;
-}
-
-.container {
-	width: 80%;
-	margin: 0 auto;
+	width: 100%;
+	padding: 50px 100px;
+	margin-left: 40%;
+	position: relative;
 }
 
 .topPannel {
@@ -36,20 +34,47 @@
 
 .description {
 	display: flex;
-	justify-content: space-between;
-	margin-top: 40px;
+/*	justify-content: space-between;
+*/	margin-top: 40px;
 	margin-bottom: 15px;
 	color: #80A59D;
+	font-size: 16px;
+}
+
+.description span {
+	min-width: 20%;
+}
+
+.description span:hover {
+	cursor: default;
+}
+
+
+hr {
+	color: #F0F0F0;
 }
 
 .options {
 	color: #1C4D43;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.options:hover {
+	cursor: default;
 }
 
 .optionValues {
-	padding: 2px 20px;
+	padding: 7px 20px;
 	background-color: #1C4D43;
 	border-radius: 4px;
 	color: #fff;
 	margin-left: 15px;
+	font-size: 12px;
+	line-height: 28px;
+	font-weight: 500;
+}
+
+.optionValues:hover {
+	cursor: default;
 }
