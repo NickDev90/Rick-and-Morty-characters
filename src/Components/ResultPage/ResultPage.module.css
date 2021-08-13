@@ -32,22 +32,6 @@
 	cursor: pointer;
 }
 
-.description {
-	display: flex;
-/*	justify-content: space-between;
-*/	margin-top: 40px;
-	margin-bottom: 15px;
-	color: #80A59D;
-	font-size: 16px;
-}
-
-.description span {
-	min-width: 20%;
-}
-
-.description span:hover {
-	cursor: default;
-}
 
 
 hr {
@@ -77,4 +61,10 @@ hr {
 
 .optionValues:hover {
 	cursor: default;
+}
+
+.noCharacters {
+	font-size: 1.5em;
+	color: #1C4D43;
+	margin-top: 20px;
 }

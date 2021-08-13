@@ -7,7 +7,7 @@ import anonPhoto from './../../assets/images/anon_photo.jpg';
 
 const Character = (props) => {
 
-	return  <div>
+	return (
   				<div className={styles.heroInfo}>
                      <span>
                         <img src={props.hero.image || anonPhoto} 
@@ -18,8 +18,7 @@ const Character = (props) => {
                      <span>{props.hero.status}</span>
                      <span>{props.hero.location.name}</span>
   				</div>
-
-    </div>
+   )
 }
 
 

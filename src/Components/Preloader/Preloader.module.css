@@ -1,20 +1,3 @@
-.userPhoto {
-  border-radius: 50%;
-  width: 100px;
-}
-
-.selectedPage {
-	font-weight: bold;
-}
-
-span {
-	margin-right: 10px;
-}
-
-span:hover {
-	cursor: pointer;
-}
-
 .lds_dual_ring {
   display: inline-block;
   width: 80px;

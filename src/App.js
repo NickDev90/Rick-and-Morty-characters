@@ -4,11 +4,8 @@ import {BrowserRouter, Route, withRouter, Redirect} from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar.jsx';
 import SearchPage from './Components/SearchPage/SearchPage.jsx';
 import ResultPage from './Components/ResultPage/ResultPage.jsx';
- import {reqApi} from './API/reqApi.js'
+import {reqApi} from './API/reqApi.js'
 
-
-    // const getCharacters = fetch(`https://rickandmortyapi.com/api/character`).
-    // then( response => response.json());
 
 class App extends React.Component {
   constructor(props) {
@@ -27,17 +24,22 @@ class App extends React.Component {
   }
 
   changeState(name, status, gender) {
+    this.setState({
+      isFetching: true,
+      requestName: name,
+      requestStatus: status,
+      requestGender: gender
+
+    })
+
     reqApi.getHeroes(name, status, gender)
     .then(
       data => {
         console.log(data)
         this.setState({
             isLoaded: true,
-            isFetching: true,
+            isFetching: false,
             characters: data.results,
-            requestName: name,
-            requestStatus: status,
-            requestGender: gender
           });
         },
       error => {
@@ -52,6 +54,7 @@ class App extends React.Component {
 
   backToSearch() {
     this.setState({
+            error: null,
             isLoaded: false,
             isFetching: false,
             characters: [],
@@ -63,12 +66,6 @@ class App extends React.Component {
   componentDidMount() {
 
   }
-
-  componentDidUpdate() {
-
-    console.log(this.state)
-  }
-
 
   render() {
 
@@ -86,7 +83,7 @@ class App extends React.Component {
             {this.state.isFetching &&
               <Redirect to={`/results`} />
             }
-            
+
           <Route path='/results' render={ () => 
             <ResultPage backToSearch={this.backToSearch} state={this.state}
               isLoaded={this.state.isLoaded}/> } />

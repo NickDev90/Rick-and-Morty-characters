@@ -1,18 +1,19 @@
 .heroPhoto {
-	width: 100px;
+	max-width: 100%;
 }
 
 .heroInfo {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
 	align-items: center;
 	width: 100%;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	background-color: #F7F7F7;
+	padding: 10px 20px;
 }
 
 .heroInfo span {
-	flex-wrap: wrap;
-	min-width: 20%;
 	color: #1C4D43;
 	font-size: 16px;
 }
@@ -29,4 +30,22 @@
 
 span {
 	text-align: left;
+}
+
+.description {
+	display: grid;
+	grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	text-align: left;
+	margin-top: 40px;
+	margin-bottom: 15px;
+	color: #80A59D;
+	font-size: 16px;
+	padding: 0px 20px;
+	width: 100%;
+
+}
+
+.description span:hover {
+	cursor: default;
 }
