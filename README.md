@@ -5,8 +5,16 @@ This is an application for easy searching for characters of Rick&Morty anime sho
 This project was bootstrapped with [Create React App] and build in React JS library.
 
 ## How to run the app?
+First of all, you need Node.js to be installed on your machine. 
+Then you need to install node modules from package.json file.
 
-In the project directory, you can run in command line:
+For this you can do:
+
+In the project directory you can open command line and type:
+
+### `npm install`
+
+After installing all packages and dependences for starting the app you can type:
 
 ### `npm start`
 
