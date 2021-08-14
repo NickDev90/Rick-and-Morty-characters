@@ -7,7 +7,8 @@ import Character from './Character.js'
 const CharactersList = ({characters}) => {
 
 
-   return  <div>
+   return  (
+   <div>
 
    {  characters[0] &&    
       <div className={styles.description}>
@@ -19,11 +20,11 @@ const CharactersList = ({characters}) => {
       </div>
    }
 
-      {
-         characters.map( (item) => <Character hero={item} key={item.id}/> )
-      }      
+   {
+      characters.map( (item) => <Character hero={item} key={item.id}/> )
+   }      
 
-    </div>
-}
+    </div>)
+} 
 
 export default CharactersList;

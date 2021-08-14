@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, withRouter, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar.jsx';
-import SearchPage from './Components/SearchPage/SearchPage.jsx';
-import ResultPage from './Components/ResultPage/ResultPage.jsx';
+import SearchPage from './Components/SearchPage/SearchPage.js';
+import ResultPage from './Components/ResultPage/ResultPage.js';
 import {reqApi} from './API/reqApi.js'
+import {useHistory} from 'react-router-dom'
 
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
       isFetching: false,
       characters: [],
       requestName: '',
+      requestStatus: '',
       requestGender: ''
     };
 
@@ -72,22 +74,22 @@ class App extends React.Component {
     return (
       <div className="App">
         <Sidebar />
-          <BrowserRouter>
+        <BrowserRouter>
           <Route path='/search' render={ () =>
-            <SearchPage changeState={this.changeState}/>}/>
-
-          <Route path='/' render={ () =>
+            <SearchPage changeState={this.changeState}/>}
+          />
+          <Route exact path='/' render={ () =>
               <Redirect to={'search'}  />} 
           /> 
-
-            {this.state.isFetching &&
-              <Redirect to={`/results`} />
-            }
-
-          <Route path='/results' render={ () => 
+          <Route path='/results/:name?' render={ () => 
             <ResultPage backToSearch={this.backToSearch} state={this.state}
-              isLoaded={this.state.isLoaded}/> } />
-          </BrowserRouter>
+              isLoaded={this.state.isLoaded} changeState={this.changeState}/> } 
+          />
+
+          {this.state.isFetching &&
+            <Redirect to={`/results`} />
+          }
+        </BrowserRouter>
       </div>
     );
   }

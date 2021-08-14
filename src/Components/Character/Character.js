@@ -5,18 +5,18 @@ import anonPhoto from './../../assets/images/anon_photo.jpg';
 
 
 
-const Character = (props) => {
+const Character = ({hero}) => {
 
 	return (
   				<div className={styles.heroInfo}>
                      <span>
-                        <img src={props.hero.image || anonPhoto} 
+                        <img src={hero.image || anonPhoto} 
                            className={styles.heroPhoto}/>
                      </span>
-                     <span className={styles.heroName}>{props.hero.name}</span>
-                     <span>{props.hero.gender}</span>
-                     <span>{props.hero.status}</span>
-                     <span>{props.hero.location.name}</span>
+                     <span className={styles.heroName}>{hero.name}</span>
+                     <span>{hero.gender}</span>
+                     <span>{hero.status}</span>
+                     <span>{hero.location.name}</span>
   				</div>
    )
 }
