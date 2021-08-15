@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Rick-and-Morty-characters/static/css/main.7a54f950.chunk.css",
+    "main.js": "/Rick-and-Morty-characters/static/js/main.114ada6f.chunk.js",
+    "main.js.map": "/Rick-and-Morty-characters/static/js/main.114ada6f.chunk.js.map",
+    "runtime-main.js": "/Rick-and-Morty-characters/static/js/runtime-main.8f3ea6f9.js",
+    "runtime-main.js.map": "/Rick-and-Morty-characters/static/js/runtime-main.8f3ea6f9.js.map",
+    "static/js/2.c7a1e6e1.chunk.js": "/Rick-and-Morty-characters/static/js/2.c7a1e6e1.chunk.js",
+    "static/js/2.c7a1e6e1.chunk.js.map": "/Rick-and-Morty-characters/static/js/2.c7a1e6e1.chunk.js.map",
+    "index.html": "/Rick-and-Morty-characters/index.html",
+    "static/css/main.7a54f950.chunk.css.map": "/Rick-and-Morty-characters/static/css/main.7a54f950.chunk.css.map",
+    "static/js/2.c7a1e6e1.chunk.js.LICENSE.txt": "/Rick-and-Morty-characters/static/js/2.c7a1e6e1.chunk.js.LICENSE.txt",
+    "static/media/ResultPage.module.css": "/Rick-and-Morty-characters/static/media/Path10.26c46151.svg",
+    "static/media/rick-and-morty-portal-shoes-white-clothing-zavvi-23 1.74996924.png": "/Rick-and-Morty-characters/static/media/rick-and-morty-portal-shoes-white-clothing-zavvi-23 1.74996924.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f3ea6f9.js",
+    "static/js/2.c7a1e6e1.chunk.js",
+    "static/css/main.7a54f950.chunk.css",
+    "static/js/main.114ada6f.chunk.js"
+  ]
+}
