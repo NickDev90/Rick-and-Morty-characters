@@ -10,7 +10,6 @@ export const reqApi = {
     getHeroes (name, status, gender) {
         return instance.get(`?name=${name}&status=${status}&gender=${gender}`)
         .then(response => {
-            console.log(response);
             return response.data
         })
     }

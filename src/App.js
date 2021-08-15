@@ -37,7 +37,6 @@ class App extends React.Component {
     reqApi.getHeroes(name, status, gender)
     .then(
       data => {
-        console.log(data)
         this.setState({
             isLoaded: true,
             isFetching: false,
