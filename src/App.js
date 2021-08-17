@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, Redirect} from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar.jsx';
 import SearchPage from './Components/SearchPage/SearchPage.js';
 import ResultPage from './Components/ResultPage/ResultPage.js';
@@ -73,7 +73,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Sidebar />
-        <BrowserRouter>
+        <HashRouter baseName={process.env.PUBLIC_URL}>
           <Route path='/search' render={ () =>
             <SearchPage changeState={this.changeState}/>}
           />
@@ -88,7 +88,7 @@ class App extends React.Component {
           {this.state.isFetching &&
             <Redirect to={`/results`} />
           }
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
