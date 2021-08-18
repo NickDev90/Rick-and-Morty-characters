@@ -1,8 +1,16 @@
 .searchPage {
 	display: flex;
 	align-items: center;
-	width: 100%;
 	padding-left: 100px;
 	margin-left: 40%;
 	position: relative;
 }
+
+@media (max-width: 768px) {
+  .searchPage {
+    margin: 0;
+    justify-content: center;
+    padding: 50px 50px 100px 50px;
+  }
+}
+

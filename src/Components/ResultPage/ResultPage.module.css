@@ -1,5 +1,4 @@
 .result_page {
-	width: 100%;
 	padding: 50px 100px;
 	margin-left: 40%;
 	position: relative;
@@ -39,8 +38,19 @@ hr {
 }
 
 .options {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.options > * {
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+.optionsTitle {
 	color: #1C4D43;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 }
 
@@ -53,10 +63,9 @@ hr {
 	background-color: #1C4D43;
 	border-radius: 4px;
 	color: #fff;
-	margin-left: 15px;
-	font-size: 12px;
-	line-height: 28px;
+	font-size: 14px;
 	font-weight: 500;
+	white-space: nowrap;
 }
 
 .optionValues:hover {
@@ -67,4 +76,42 @@ hr {
 	font-size: 1.5em;
 	color: #1C4D43;
 	margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .result_page {
+    margin: 0;
+    padding: 30px;
+  }
+
+  .topPannel {
+  	margin-bottom: 20px;
+  }
+
+  .searchTitle {
+  	font-size: 24px
+  }
+
+  .optionsTitle {
+  	font-size: 14px;
+  }
+
+  .optionValues {
+  	font-size: 12px;
+  }
+}
+
+
+@media (max-width: 480px) {
+	.result_page {
+		padding: 20px;
+	}
+
+	.searchTitle {
+		margin-left: 20px;
+	}
+
+	.noCharacters {
+		font-size: 20px;
+	}
 }

@@ -71,8 +71,8 @@ const ResultPage = (props) => {
 				<h2 className={styles.searchTitle}>Search results</h2>
 			</div>
 
-			<div>
-				<span className={styles.options}>Options:</span>
+			<div className={styles.options}>
+				<span className={styles.optionsTitle}>Options:</span>
 				<span className={styles.optionValues}>Name: {requestName}</span>
 				{requestGender && <span className={styles.optionValues}>Gender: {requestGender}</span>}
 				{requestStatus && <span className={styles.optionValues}>Status: {requestStatus}</span>}

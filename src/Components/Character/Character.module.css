@@ -1,10 +1,10 @@
 .heroPhoto {
-	max-width: 100%;
+	width: 100%;
 }
 
 .heroInfo {
 	display: grid;
-	grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1fr;
+	grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1.3fr;
 	grid-column-gap: 20px;
 	align-items: center;
 	width: 100%;
@@ -16,6 +16,7 @@
 .heroInfo span {
 	color: #1C4D43;
 	font-size: 16px;
+	width: 100%;
 }
 
 .heroInfo span:hover {
@@ -30,11 +31,12 @@
 
 span {
 	text-align: left;
+	overflow: hidden;
 }
 
 .description {
 	display: grid;
-	grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1fr;
+	grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1.3fr;
 	grid-column-gap: 20px;
 	text-align: left;
 	margin-top: 40px;
@@ -48,4 +50,45 @@ span {
 
 .description span:hover {
 	cursor: default;
+}
+
+@media (max-width: 768px) {
+
+	.heroInfo {
+		grid-column-gap: 10px;
+		width: auto;
+	}
+
+	.heroInfo span {
+		font-size: 14px;
+	}
+
+	.heroInfo .heroName {
+		font-size: 16px;
+	}
+
+	.description {
+		grid-column-gap: 10px;
+		font-size: 14px;
+		width: auto;
+	}
+}
+
+
+@media (max-width: 480px) {
+	.heroInfo, .description {
+		padding: 0;
+	}
+
+	.description {
+		font-size: 12px
+	}
+
+	.heroInfo span {
+		font-size: 12px;
+	}
+
+	.heroInfo .heroName {
+		font-size: 14px;
+	}
 }

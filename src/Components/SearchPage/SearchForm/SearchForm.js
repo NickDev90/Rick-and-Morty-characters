@@ -45,7 +45,7 @@ function SearchForm (props) {
 
   })
 
-  return (<div>
+  return (<div className={styles.formContainer}>
     <h1>Search for characters</h1>
     <form onSubmit={formik.handleSubmit} aria-label="form">
       <input
