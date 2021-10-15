@@ -8,9 +8,11 @@ import * as queryString from 'querystring';
 
 const ResultPage = (props) => {
 	const {backToSearch, changeState} = props;
- 	const {requestName, requestStatus, requestGender, characters} = props.state;
+ 	const { requestName, requestStatus, requestGender, requestPage, characters, heroesCount } = props.state;
 
 	const history = useHistory()
+
+	console.log(requestPage);
 
 	useEffect( () => {
 		const parsed = queryString.parse(history.location.search.substr(1))
@@ -30,7 +32,12 @@ const ResultPage = (props) => {
 			parsedGender = parsed.gender
 		}
 
-		changeState(parsedName, parsedStatus, parsedGender);
+		let parsedPage = requestPage;
+		if (parsed.page) {
+			parsedPage = parsed.page
+		}
+
+		changeState(parsedName, parsedStatus, parsedGender, parsedPage);
 
 	}, [])
 
@@ -58,7 +65,19 @@ const ResultPage = (props) => {
 				search: `?name=${requestName}`
 			})
 		}
-	}, [requestName, requestStatus, requestGender])
+
+	}, [requestName, requestStatus, requestGender, requestPage])
+
+	useEffect ( () => {
+ 		
+		if(requestPage){
+			history.push({
+				pathname: 'results',
+				search: `${history.location.search}&page=${requestPage}`
+			})
+		}
+
+	}, [requestPage])
 
 
 	return (
@@ -81,7 +100,8 @@ const ResultPage = (props) => {
 			<hr/>
 			
 			{
-				!props.isLoaded ? <Preloader /> : <CharactersList characters={characters}/>			
+				!props.isLoaded ? <Preloader /> : <CharactersList characters={characters} changeState={changeState} requestPage={requestPage}
+				heroesCount={heroesCount} requestName={requestName} requestStatus={requestStatus} requestGender={requestGender}/>			
 			}
 
 			{

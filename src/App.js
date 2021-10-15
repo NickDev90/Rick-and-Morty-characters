@@ -18,29 +18,33 @@ class App extends React.Component {
       characters: [],
       requestName: '',
       requestStatus: '',
-      requestGender: ''
+      requestGender: '',
+      requestPage: 1,
+      heroesCount: null,
+      pages: null
     };
 
     this.changeState = this.changeState.bind(this);
     this.backToSearch = this.backToSearch.bind(this);
   }
 
-  changeState(name, status, gender) {
+  changeState(name, status, gender, page) {
     this.setState({
       isFetching: true,
       requestName: name,
       requestStatus: status,
-      requestGender: gender
-
+      requestGender: gender,
+      requestPage: page
     })
 
-    reqApi.getHeroes(name, status, gender)
+    reqApi.getHeroes(name, status, gender, page)
     .then(
       data => {
         this.setState({
             isLoaded: true,
             isFetching: false,
             characters: data.results,
+            heroesCount: data.info.count
           });
         },
       error => {
@@ -61,7 +65,9 @@ class App extends React.Component {
             characters: [],
             requestName: '',
             requestStatus: '',
-            requestGender: ''
+            requestGender: '',
+            requestPage: '',
+            heroesCount: null
     });
   }
   componentDidMount() {
@@ -81,8 +87,8 @@ class App extends React.Component {
               <Redirect to={'search'}  />} 
           /> 
           <Route path='/results/:name?' render={ () => 
-            <ResultPage backToSearch={this.backToSearch} state={this.state}
-              isLoaded={this.state.isLoaded} changeState={this.changeState}/> } 
+            <ResultPage backToSearch={this.backToSearch} state={this.state} 
+              isLoaded={this.state.isLoaded} changeState={this.changeState} /> } 
           />
 
           {this.state.isFetching &&

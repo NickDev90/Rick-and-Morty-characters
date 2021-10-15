@@ -7,10 +7,27 @@ const instance = axios.create({
 })
 
 export const reqApi = {
-    getHeroes (name, status, gender) {
-        return instance.get(`?name=${name}&status=${status}&gender=${gender}`)
+    getHeroes (name, status, gender, page) {
+        return instance.get(`?name=${name}&status=${status}&gender=${gender}&page=${page}`)
+        .then(response => {
+            return response.data
+        })
+    },
+
+    changePage (page) {
+        return instance.get(`?page=${page}`)
+        .then(response => {
+            return response.data
+        })
+    },
+
+    getOneCharacter (id) {
+        return instance.get(`/${id}`)
         .then(response => {
             return response.data
         })
     }
 }
+
+
+ 
