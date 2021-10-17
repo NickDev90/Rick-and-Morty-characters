@@ -5,9 +5,11 @@ import { Paginator } from '../Paginator/Paginator';
 
 
 
-const CharactersList = ({characters, heroesCount, requestName, requestStatus, requestGender, requestPage, changeState}) => {
+const CharactersList = ({characters, heroesCount, requestName,
+    requestStatus, requestGender, requestPage, changeState}) => {
 
-console.log();
+
+
    return  (
    <div>
 
@@ -22,7 +24,7 @@ console.log();
    }
 
    {
-      characters.map( (item) => <Character hero={item} key={item.id}/> )
+      characters.map( (item) => <Character hero={item} key={item.id} /> )
    }  
   
    <Paginator heroesCount={heroesCount} requestName={requestName} requestPage={requestPage}

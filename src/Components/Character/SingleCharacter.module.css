@@ -1,0 +1,119 @@
+.singleCharacterPage {
+	padding: 50px 100px;
+	margin-left: 40%;
+	position: relative;
+}
+
+.topPannel {
+	display: flex;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.heroName {
+	margin-left: 60px;
+	color: #1C4D43;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 16px;
+}
+
+.topPannel {
+	display: flex;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.backButton {
+	background-color: #FAFAFA;
+	background-image: url('../../assets/images/Path10.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid #EDFDF3;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.searchTitle {
+	margin-left: 60px;
+	color: #1C4D43;
+	font-weight: 500;
+	font-size: 30px;
+}
+
+.heroCard {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.leftSide {
+
+}
+
+.rightSide {
+	text-align-last: left;
+}
+
+
+
+.heroInfo li {
+	list-style: none;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.heroInfo li b {
+	font-style: italic;
+	margin-right: 10px;
+}
+
+.heroImage {
+	width: 100%;
+}
+
+.heroImage img {
+	max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+	.heroCard {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.heroInfo {
+		padding: 0;
+	}
+
+	.topPannel  {
+		margin-bottom: 20px;
+	}
+
+
+}
+
+@media (max-width: 768px) {
+	.singleCharacterPage {
+		margin: 0;
+    	padding: 80px;
+	}
+
+	.searchTitle {
+		font-size: 24px
+	}
+}
+
+@media (max-width: 480px) {
+	.singleCharacterPage {
+    	padding:  20px 40px;
+	}
+
+	.searchTitle {
+		margin-left: 20px;
+	}
+}
+

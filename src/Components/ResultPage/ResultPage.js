@@ -7,12 +7,11 @@ import { useHistory } from 'react-router-dom'
 import * as queryString from 'querystring';
 
 const ResultPage = (props) => {
-	const {backToSearch, changeState} = props;
+	const {backToSearch, changeState, getOneHero} = props;
  	const { requestName, requestStatus, requestGender, requestPage, characters, heroesCount } = props.state;
 
 	const history = useHistory()
 
-	console.log(requestPage);
 
 	useEffect( () => {
 		const parsed = queryString.parse(history.location.search.substr(1))
@@ -100,8 +99,9 @@ const ResultPage = (props) => {
 			<hr/>
 			
 			{
-				!props.isLoaded ? <Preloader /> : <CharactersList characters={characters} changeState={changeState} requestPage={requestPage}
-				heroesCount={heroesCount} requestName={requestName} requestStatus={requestStatus} requestGender={requestGender}/>			
+				!props.isLoaded ? <Preloader /> : <CharactersList characters={characters} changeState={changeState}
+				 requestPage={requestPage} heroesCount={heroesCount} requestName={requestName}
+				 requestStatus={requestStatus} requestGender={requestGender} getOneHero={getOneHero}/>			
 			}
 
 			{

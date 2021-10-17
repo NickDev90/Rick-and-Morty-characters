@@ -5,7 +5,7 @@ import Sidebar from './Components/Sidebar/Sidebar.jsx';
 import SearchPage from './Components/SearchPage/SearchPage.js';
 import ResultPage from './Components/ResultPage/ResultPage.js';
 import {reqApi} from './API/reqApi.js'
-import {useHistory} from 'react-router-dom'
+import SingleCharacter from './Components/Character/SingleCharacter';
 
 
 class App extends React.Component {
@@ -21,7 +21,7 @@ class App extends React.Component {
       requestGender: '',
       requestPage: 1,
       heroesCount: null,
-      pages: null
+      heroId: ''
     };
 
     this.changeState = this.changeState.bind(this);
@@ -70,9 +70,6 @@ class App extends React.Component {
             heroesCount: null
     });
   }
-  componentDidMount() {
-
-  }
 
   render() {
 
@@ -80,20 +77,21 @@ class App extends React.Component {
       <div className="App">
         <Sidebar />
         <HashRouter baseName={process.env.PUBLIC_URL}>
-          <Route path='/search' render={ () =>
-            <SearchPage changeState={this.changeState}/>}
-          />
-          <Route exact path='/' render={ () =>
-              <Redirect to={'search'}  />} 
-          /> 
-          <Route path='/results/:name?' render={ () => 
-            <ResultPage backToSearch={this.backToSearch} state={this.state} 
-              isLoaded={this.state.isLoaded} changeState={this.changeState} /> } 
-          />
-
-          {this.state.isFetching &&
-            <Redirect to={`/results`} />
-          }
+            <Route path='/search' render={ () =>
+              <SearchPage changeState={this.changeState}/>}
+            />
+            <Route exact path='/' render={ () =>
+                <Redirect to={'search'}  />} 
+            /> 
+            
+            <Route path='/results/' render={ () => 
+              <ResultPage backToSearch={this.backToSearch} state={this.state} 
+                isLoaded={this.state.isLoaded} changeState={this.changeState}/> } 
+            />
+            <Route path='/hero/:id?' component={SingleCharacter} />
+            {this.state.isFetching &&
+              <Redirect to={`/results`} />
+            }
         </HashRouter>
       </div>
     );

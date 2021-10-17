@@ -1,5 +1,6 @@
 .heroPhoto {
 	width: 100%;
+	cursor: pointer;
 }
 
 .heroInfo {
