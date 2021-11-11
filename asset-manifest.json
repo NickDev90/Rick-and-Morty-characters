@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Rick-and-Morty-characters/static/css/main.2d695805.chunk.css",
-    "main.js": "/Rick-and-Morty-characters/static/js/main.32febf3d.chunk.js",
-    "main.js.map": "/Rick-and-Morty-characters/static/js/main.32febf3d.chunk.js.map",
+    "main.css": "/Rick-and-Morty-characters/static/css/main.043c3ad9.chunk.css",
+    "main.js": "/Rick-and-Morty-characters/static/js/main.d4c43e7c.chunk.js",
+    "main.js.map": "/Rick-and-Morty-characters/static/js/main.d4c43e7c.chunk.js.map",
     "runtime-main.js": "/Rick-and-Morty-characters/static/js/runtime-main.8f3ea6f9.js",
     "runtime-main.js.map": "/Rick-and-Morty-characters/static/js/runtime-main.8f3ea6f9.js.map",
     "static/js/2.adf4809a.chunk.js": "/Rick-and-Morty-characters/static/js/2.adf4809a.chunk.js",
     "static/js/2.adf4809a.chunk.js.map": "/Rick-and-Morty-characters/static/js/2.adf4809a.chunk.js.map",
     "index.html": "/Rick-and-Morty-characters/index.html",
-    "static/css/main.2d695805.chunk.css.map": "/Rick-and-Morty-characters/static/css/main.2d695805.chunk.css.map",
+    "static/css/main.043c3ad9.chunk.css.map": "/Rick-and-Morty-characters/static/css/main.043c3ad9.chunk.css.map",
     "static/js/2.adf4809a.chunk.js.LICENSE.txt": "/Rick-and-Morty-characters/static/js/2.adf4809a.chunk.js.LICENSE.txt",
     "static/media/SingleCharacter.module.css": "/Rick-and-Morty-characters/static/media/Path10.c2df8b7c.svg",
     "static/media/rick-and-morty-portal-shoes-white-clothing-zavvi-23 1.74996924.png": "/Rick-and-Morty-characters/static/media/rick-and-morty-portal-shoes-white-clothing-zavvi-23 1.74996924.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.8f3ea6f9.js",
     "static/js/2.adf4809a.chunk.js",
-    "static/css/main.2d695805.chunk.css",
-    "static/js/main.32febf3d.chunk.js"
+    "static/css/main.043c3ad9.chunk.css",
+    "static/js/main.d4c43e7c.chunk.js"
   ]
 }
